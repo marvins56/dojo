@@ -38,5 +38,5 @@ jobs:
         IMAGE_NAME: marvin_dojo
       run: |
         ls -R  # List directory contents for debugging
-        docker build -t ${{ secrets.AZURE_REGISTRY_NAME }}.azurecr.io/$IMAGE_NAME:latest -f ../Dockerfile ../
+        docker build -t ${{ secrets.AZURE_REGISTRY_NAME }}.azurecr.io/$IMAGE_NAME:latest .
         docker push ${{ secrets.AZURE_REGISTRY_NAME }}.azurecr.io/$IMAGE_NAME:latest
